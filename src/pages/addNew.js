@@ -49,7 +49,7 @@ export default function AddNew() {
               <label className='sr-only' htmlFor='name'>
                 Name
               </label>
-              <input id='name' type='text' name='name' className='w-full input rounded-lg border-gray-200 p-3 text-sm' placeholder='Framework Name' onChange={changeData} value={data.name} />
+              <input required id='name' type='text' name='name' className='w-full input rounded-lg border-gray-200 p-3 text-sm' placeholder='Framework Name' onChange={changeData} value={data.name} />
             </div>
 
             <div>
@@ -57,6 +57,7 @@ export default function AddNew() {
                 Description
               </label>
               <textarea
+                required
                 id='description'
                 name='description'
                 className='textarea w-full rounded-lg border-gray-200 p-3 text-sm'
@@ -71,21 +72,21 @@ export default function AddNew() {
                 <label className='sr-only' htmlFor='doc'>
                   Doc
                 </label>
-                <input id='doc' type='text' name='doc' className='input w-full rounded-lg border-gray-200 p-3 text-sm' placeholder='Link Doc' onChange={changeData} value={data.doc} />
+                <input required id='doc' type='text' name='doc' className='input w-full rounded-lg border-gray-200 p-3 text-sm' placeholder='Link Doc' onChange={changeData} value={data.doc} />
               </div>
 
               <div>
                 <label className='sr-only' htmlFor='git'>
                   Github
                 </label>
-                <input id='git' type='text' name='github' className='input w-full rounded-lg border-gray-200 p-3 text-sm' placeholder='Link Github' onChange={changeData} value={data.github} />
+                <input required id='git' type='text' name='github' className='input w-full rounded-lg border-gray-200 p-3 text-sm' placeholder='Link Github' onChange={changeData} value={data.github} />
               </div>
             </div>
             <div>
               <label className='sr-only' htmlFor='image'>
                 Image
               </label>
-              <input id='image' type='text' name='image' className='input w-full rounded-lg border-gray-200 p-3 text-sm' placeholder='Image Link' onChange={changeData} value={data.image} />
+              <input required id='image' type='text' name='image' className='input w-full rounded-lg border-gray-200 p-3 text-sm' placeholder='Image Link' onChange={changeData} value={data.image} />
             </div>
             <div className='mt-4'>
               <button type='submit'>
