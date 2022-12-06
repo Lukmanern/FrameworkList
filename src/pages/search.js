@@ -53,7 +53,15 @@ export default function Search() {
           <p className='font-bold text-3xl sm:pl-8'>Find Framework</p>
           <div class='flex justify-end'>
             <div class='relative max-w-lg'>
-              <input className='w-full input rounded-full border-gray-500 border-2 p-4 pr-32 text-sm font-medium' type='text' placeholder='Laravel' onChange={e => setName(e.target.value)} />
+              <input
+                required
+                minLength={3}
+                maxLength={10}
+                className='w-full input rounded-full border-gray-500 border-2 p-4 pr-32 text-sm font-medium'
+                type='text'
+                placeholder='Laravel'
+                onChange={e => setName(e.target.value)}
+              />
 
               <button className='absolute top-1/2 right-0.5 -translate-y-1/2 rounded-full bg-gray-400 px-5 py-3 text-sm font-medium text-white transition' type='submit' onClick={searchData}>
                 Search
